@@ -54,6 +54,7 @@ LOCAL_CFLAGS += -fPIC -DPIC
 include $(BUILD_STATIC_LIBRARY)
 
 # Test application
+ifeq (0,1)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := pngtest
@@ -65,3 +66,4 @@ LOCAL_STATIC_LIBRARIES:= libyahoo_png libyahoo_zlib
 LOCAL_MODULE_TAGS := debug
 
 include $(BUILD_EXECUTABLE)
+endif
